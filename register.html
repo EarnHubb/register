@@ -175,9 +175,7 @@ button:hover{
 </select>
 
 <input type="tel" placeholder="Phone Number">
-</div>
-
-    
+</div><br>
 
 <input type="text" id="accessKey" placeholder="Enter/Paste Access Key">
 <div class="link">
@@ -202,7 +200,7 @@ Don't have a
 <span>I agree to the <a href="#">Terms</a></span>
 </div>
 
-<<button type="button" onclick="validateAccessKey()">
+<button type="button" onclick="validateAccessKey()">
     Create Account
 </button>
 
@@ -223,11 +221,20 @@ pass.type="password";
 function validateAccessKey() {
     const accessKey = document.getElementById("accessKey").value.trim();
 
+    // Correct Access Key
+    const validKey = "V19370425";
+
     if (accessKey === "") {
-        alert("Please enter your Velora Access Key before creating an account.");
+        alert("Please enter your Velora Access Key.");
         return;
     }
 
+    if (accessKey !== validKey) {
+        alert("Invalid Access Key! Please enter a valid Velora Access Key.");
+        return;
+    }
+
+    // Access Key is correct
     window.open("https://earnhubb.github.io/packages/packages", "_blank");
 }
     </script>
