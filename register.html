@@ -222,6 +222,19 @@ pass.type="password";
 }
 }
 </script>
+    <script>
+function validateAccessKey() {
+    const accessKey = document.querySelector('input[placeholder="Enter/Paste Access Key"]').value.trim();
+
+    if (accessKey === "") {
+        alert("Please enter your Velora Access Key before creating an account.");
+        return;
+    }
+
+    // Open external link if Access Key is entered
+    window.location.href = "https://your-link.com";
+}
+    </script>
 
 </body>
 </html>
