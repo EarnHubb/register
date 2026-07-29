@@ -200,9 +200,9 @@ Don't have a
 <span>I agree to the <a href="#">Terms</a></span>
 </div>
 
-<a href="https://earnhubb.github.io/packages/packages" target="_blank">
-    <button type="button">Create Account</button>
-</a>
+<<button type="button" onclick="validateAccessKey()">
+    Create Account
+</button>
 
 </div>
 
@@ -219,18 +219,16 @@ pass.type="password";
 </script>
     <script>
 function validateAccessKey() {
-    const accessKey = document.querySelector('input[placeholder="Enter/Paste Access Key"]').value.trim();
+    const accessKey = document.getElementById("accessKey").value.trim();
 
     if (accessKey === "") {
         alert("Please enter your Velora Access Key before creating an account.");
         return;
     }
 
-    // Open external link if Access Key is entered
-    window.location.href = "https://earnhubb.github.io/packages/packages";
+    window.open("https://earnhubb.github.io/packages/packages", "_blank");
 }
     </script>
-
 </body>
 </html>
 
